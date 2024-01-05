@@ -1,9 +1,13 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
+extern crate crankstart_sys;
+
 cfg_if::cfg_if! {
     if #[cfg(not(feature = "std"))] {
         mod instant;
+        mod crankstart;
         pub use crate::instant::Instant;
+        pub use crate::crankstart::now;
     } else if #[cfg(any(
         all(target_arch = "wasm32", not(target_os = "wasi")),
         target_arch = "asmjs"

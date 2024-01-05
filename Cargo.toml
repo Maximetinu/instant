@@ -14,10 +14,11 @@ wasm-bindgen = ["js-sys", "wasm-bindgen_rs", "web-sys"]
 inaccurate = []
 now = []
 std = []
-default = ["std"]
+default = []
 
 [dependencies]
 cfg-if = "1.0"
+crankstart-sys = { path = "../crankstart/crankstart-sys" }
 
 [target.wasm32-unknown-unknown.dependencies]
 js-sys = { version = "0.3", optional = true }
