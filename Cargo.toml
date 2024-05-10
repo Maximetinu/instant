@@ -18,7 +18,8 @@ default = []
 
 [dependencies]
 cfg-if = "1.0"
-crankstart-sys = { path = "../crankstart/crankstart-sys" }
+# crankstart-sys = { path = "../crankstart/crankstart-sys" }
+crankstart-sys = { git = "https://github.com/pd-rs/crankstart.git" }
 
 [target.wasm32-unknown-unknown.dependencies]
 js-sys = { version = "0.3", optional = true }
